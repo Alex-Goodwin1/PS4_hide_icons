@@ -244,4 +244,3 @@ exe собраны PyInstaller и не подписаны, поэтому SmartS
 
 MIT, Copyright (c) 2026 Alex Goodwin — см. `LICENSE`. Правка `app.db` — вмешательство в системный
 файл консоли, всё делается на ваш риск.
-
