@@ -114,13 +114,14 @@ tmp\              created on the first run, never committed
 The exe files are built with PyInstaller and are not code signed, so SmartScreen may show "Windows
 protected your PC": choose More info → Run anyway. Compare the hashes with `SHA256SUMS.txt`
 (`certutil -hashfile hide_icons.exe SHA256`). The engine (`fix_db.py`, `appinfo.py`, `sfo\`,
-`fix_db.exe`) comes from the companion repository **PS4_db_rebuilder**: when it changes, update
+`fix_db.exe`) comes from the companion repository
+[**PS4_db_rebuilder**](https://github.com/Alex-Goodwin1/PS4_db_rebuilder): when it changes, update
 those files here and rebuild `hide_icons.exe`.
 
 ## License
 
 MIT, Copyright (c) 2026 Alex Goodwin — see `LICENSE`. Editing `app.db` means touching a system file,
-everything is at your own risk.
+everything is at your own risk. Project home: <https://github.com/Alex-Goodwin1/PS4_hide_icons>.
 
 ---
 
@@ -239,10 +240,12 @@ tmp\              создаётся при первом запуске, в ре
 exe собраны PyInstaller и не подписаны, поэтому SmartScreen может показать «Windows защитила ваш
 компьютер»: нажмите «Подробнее» → «Выполнить в любом случае». Сверяйте хэши с `SHA256SUMS.txt`
 (`certutil -hashfile hide_icons.exe SHA256`). Движок (`fix_db.py`, `appinfo.py`, `sfo\`,
-`fix_db.exe`) берётся из соседнего репозитория **PS4_db_rebuilder**: когда он меняется, обновите
-эти файлы здесь и пересоберите `hide_icons.exe`.
+`fix_db.exe`) берётся из соседнего репозитория
+[**PS4_db_rebuilder**](https://github.com/Alex-Goodwin1/PS4_db_rebuilder): когда он меняется,
+обновите эти файлы здесь и пересоберите `hide_icons.exe`.
 
 ## Лицензия
 
 MIT, Copyright (c) 2026 Alex Goodwin — см. `LICENSE`. Правка `app.db` — это вмешательство в
-системный файл, всё делается на свой страх и риск.
+системный файл, всё делается на свой страх и риск. Наш адрес:
+<https://github.com/Alex-Goodwin1/PS4_hide_icons>.
