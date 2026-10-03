@@ -1,0 +1,45 @@
+@echo off
+chcp 65001 >nul
+cd /d "%~dp0"
+title hide_icons - hide the desktop icons of the PS4
+
+set PROG="%~dp0hide_icons.exe"
+if not exist "%~dp0hide_icons.exe" (
+	echo.
+	echo hide_icons.exe was not found next to this file.
+	echo Unpack the whole archive into one folder and run it from there.
+	echo.
+	pause
+	exit /b 1
+)
+
+set IP=%1
+if "%IP%"=="" set /p IP=PS4 IP address: 
+if "%IP%"=="" (
+	echo.
+	echo No PS4 IP address was given.
+	echo.
+	pause
+	exit /b 1
+)
+
+rem optional second argument: profile suffix, e.g. run_hide.bat 192.0.2.10 0473217505
+set "PROFILE_ARG="
+if not "%2"=="" set "PROFILE_ARG=--profile %2"
+
+echo.
+echo ================================================================
+echo   PS4 %IP%   -   HIDE the desktop icons you choose
+echo   Every icon of app.db is printed with a number, then type the
+echo   numbers to hide, separated by a comma (for example 1,3,7).
+echo   A backup of app.db is kept in the tmp\backup folder.
+echo   The program then asks which user to edit (a number from the profiles
+echo   list, or Enter for the first profile only).
+echo   Second argument = set that user at once, e.g. 0473217505.
+echo ================================================================
+echo.
+%PROG% %IP% --pick --apply %PROFILE_ARG%
+echo.
+echo Log the PS4 user out or reboot the console so PS4 reads app.db again.
+echo.
+pause
