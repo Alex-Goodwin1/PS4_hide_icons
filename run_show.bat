@@ -23,7 +23,6 @@ if "%IP%"=="" (
 	exit /b 1
 )
 
-rem optional second argument: profile suffix, e.g. run_show.bat 192.0.2.10 0473217505
 set "PROFILE_ARG="
 if not "%2"=="" set "PROFILE_ARG=--profile %2"
 
@@ -34,7 +33,7 @@ echo   Every icon of app.db is printed with a number, then type the
 echo   numbers to bring back, separated by a comma (for example 1,3,7).
 echo   The program then asks which user to edit (a number from the profiles
 echo   list, or Enter for the first profile only).
-echo   Second argument = set that user at once, e.g. 0473217505.
+echo   Second argument = set that user at once (profile suffix).
 echo ================================================================
 echo.
 %PROG% %IP% --show --pick --apply %PROFILE_ARG%

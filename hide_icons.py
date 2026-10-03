@@ -400,7 +400,7 @@ def parse_args(argv=None):
 	parser = argparse.ArgumentParser(
 		description="hide the desktop icons of a PS4 (tbl_appbrowse_*.visible = 0), "
 			"--show brings them back")
-	parser.add_argument("PS4_IP", nargs="?", default=None, help="PS4 address, e.g. 192.0.2.10")
+	parser.add_argument("PS4_IP", nargs="?", default=None, help="address of the PS4, required unless --db is used")
 	parser.add_argument("--port", type=int, default=2121, help="FTP port (GoldHEN uses 2121)")
 	parser.add_argument("--user", default="username", help="FTP user")
 	parser.add_argument("--password", default="password", help="FTP password")
@@ -425,8 +425,8 @@ def parse_args(argv=None):
 		help="do not copy app.db to tmp/backup")
 	parser.add_argument("--profile", default=None, metavar="ID",
 		help="which users to change: ID is the suffix of tbl_appbrowse_<ID> as "
-			"printed by --list (e.g. 0473217505), a unique tail works too "
-			"(e.g. 512), several ids may be separated by commas, all = every "
+			"printed by --list, a unique tail of it works too, several ids "
+			"may be separated by commas, all = every "
 			"user of the console. Without --profile the script asks which user "
 			"in a terminal (Enter = the first profile) and uses the first "
 			"profile when there is no terminal")

@@ -23,7 +23,6 @@ if "%IP%"=="" (
 	exit /b 1
 )
 
-rem optional second argument: profile suffix, e.g. run_list.bat 192.0.2.10 0473217505
 set "PROFILE_ARG="
 if not "%2"=="" set "PROFILE_ARG=--profile %2"
 
@@ -31,7 +30,7 @@ echo.
 echo ================================================================
 echo   PS4 %IP%   -   LIST ONLY, app.db is not changed
 echo   Every user (tbl_appbrowse_<suffix>) is printed as a separate column.
-echo   Second argument = list one user only, e.g. 0473217505.
+echo   Second argument = list one user only (profile suffix).
 echo ================================================================
 echo.
 %PROG% %IP% --list %PROFILE_ARG%
