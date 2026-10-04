@@ -41,6 +41,8 @@ is used, `--titles NPXS20102,NPXS20104` skips the menu, `--yes` skips the confir
 upload.
 
 ## Which user to edit
+Note! It is advisable to make changes for only one user.
+That way, if any jailbreak issues arise, you can select a different user and run WebKit under that account.
 
 Every user of the console has its own `tbl_appbrowse_<suffix>` table. The program prints the
 suffixes when it starts and, without `--profile`, asks which user to edit:
@@ -167,6 +169,8 @@ what to hide?  номера (1 3 5), диапазон (3-6), title id, 'all', 'd
 `--titles NPXS20102,NPXS20104` пропускает меню, `--yes` — подтверждение перед загрузкой.
 
 ## Какого пользователя править
+Внимание! Желательно менять только у одного пользователя.
+Тогда при проблемах с jailbreak можно будет выбрать другого пользователя и запустить webkeet под ним.
 
 У каждого пользователя консоли своя таблица `tbl_appbrowse_<суффикс>`. Программа печатает суффиксы
 при запуске и, если не указан `--profile`, спрашивает, какого пользователя менять:
